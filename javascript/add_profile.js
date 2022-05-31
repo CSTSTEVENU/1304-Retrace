@@ -1,10 +1,3 @@
-function addNewUser (){
-    console.log("Success!")
-        createUserProfile()
-}
-
-function createUserProfile() {
-    const profile = document.getElementById('newProfileUsers')
     const newProfile = `
   <div class="shared_profiles" id="closeProfile">
     <h3 class="">Add another user?</h3>
@@ -41,7 +34,45 @@ function createUserProfile() {
   </div>
 `
 
-    profile.innerHTML += newProfile
+const sendEmailContent = `
+<div class="shared_profile_form">
+<h3 class="text-light text-center">User List</h3>
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label text-light">Name</label>
+    <input type="email" class="form-control" id="f1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label text-light">Email address</label>
+    <input type="email" class="form-control" id="f2" aria-describedby="emailHelp">
+  </div>
+  <button class = 'transparent_button' href="" onclick="sharedProfile()">
+  Submit
+  </button>
+
+  <button class = 'transparent_button' href="" onclick="sharedProfile()">
+  Cancel
+  </button>
+  </form>
+</div>
+` 
+
+
+function sharedProfile (){
+    console.log("Success!")
+        appendHTML(newProfile, 'newProfileUsers')
+}
+
+function sendEmail(){
+  console.log("Success email!")
+  appendHTML(sendEmailContent, 'emailForm')
+}
+
+function appendHTML(newContent, elementID) {
+    const profile = document.getElementById(elementID)
+
+    profile.innerHTML += newContent
 }
 
 function closeProfile (){
@@ -59,10 +90,5 @@ function clearContent(){
 }
 
 function copyContent(id){
-  var r = document.createRange();
-  r.selectNode(document.getElementById(id));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(r);
-  document.execCommand('copy');
-  window.getSelection().removeAllRanges();
+
 }
