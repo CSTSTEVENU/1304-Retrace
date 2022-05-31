@@ -48,3 +48,21 @@ function closeProfile (){
     console.log("close")
     document.getElementById("newProfileUsers").innerHTML = ""; 
 }
+
+function clearContent(){
+  console.log("Clicked")
+  let checkBox = document.querySelectorAll("input[type='checkbox']");
+  for(i = 0; i < checkBox.length; i++)
+  {
+    checkBox[i].checked = false;
+  }
+}
+
+function copyContent(id){
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+}
