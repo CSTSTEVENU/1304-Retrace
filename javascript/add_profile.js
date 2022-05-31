@@ -1,4 +1,4 @@
-    const newProfile = `
+const newProfile = `
   <div class="shared_profiles" id="closeProfile">
     <h3 class="">Add another user?</h3>
     <div class="profile_icons" id="profile_pannel">
@@ -90,5 +90,19 @@ function clearContent(){
 }
 
 function copyContent(id){
+ 
+}
 
+
+function sendEmail() {
+
+}
+
+function takeshot() {
+  const screenshotTarget = document.body;
+  
+  html2canvas(screenshotTarget).then((canvas) => {
+      const base64image = canvas.toDataURL("image/png");
+      localStorage.setItem('image', base64image);
+  });
 }

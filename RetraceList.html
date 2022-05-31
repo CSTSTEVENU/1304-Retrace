@@ -1,163 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/retrace-list.css" type="text/css" media="all">
     <link rel="stylesheet" href="./stylesheet.css">
-<<<<<<< HEAD
     <script src="/javascript/add_profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
 
-=======
-    <!-- javascript -->
-    <script src="./javascript/add_profile.js"></script>
->>>>>>> a682249ba369d3c7a599ab1f47ccf5308fd0d373
     <title>Home</title>
 </head>
-<body class="d-flex flex-column min-vh-100">
+
+<body>
     <!--Header Start-->
     <header>
         <header class="mb-3">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Retrace Application</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="RetraceList.html">Retrace List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="shared-profileJD.html">Shared List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="shared_profile.html">Shared Profiles</a>
-                        </li>
-                    </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Retrace Application</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="RetraceList.html">Retrace List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shared-profileJD.html">Shared List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shared_profile.html">Shared Profiles</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--Header End-->
+        <div class="container-xl card">
+            <div class="days-wrapper">
+                <select name="days" id="days">
+                    <option value="mon">5/29/2022 Monday</option>
+                    <option value="tue">5/30/2022 Tuesday</option>
+                    <option value="wed">5/31/2022 Wednesday</option>
+                </select>
+            </div>
+            <div class="forms-container">
+                <div class="form-wrapper">
+                    <label>Steven's Barber</label>
+                    <div class="retrace-form">
+                        <div>
+                            <input type="checkbox" id="keys" , name="keys">
+                            <label for="keys">Keys</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="backpack" , name="backpack">
+                            <label for="backpack">Backpack</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="laptop" , name="laptop">
+                            <label for="laptop">Laptop</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="phone" , name="phone">
+                            <label for="phone">Phone</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <label>Keisuke's Restaurant</label>
+                    <div class="retrace-form">
+                        <div>
+                            <input type="checkbox" id="keys" , name="keys">
+                            <label for="keys">Keys</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="backpack" , name="backpack">
+                            <label for="backpack">Backpack</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="laptop" , name="laptop">
+                            <label for="laptop">Laptop</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="phone" , name="phone">
+                            <label for="phone">Phone</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <label>Emil's Cafe</label>
+                    <div class="retrace-form">
+                        <div>
+                            <input type="checkbox" id="keys" , name="keys">
+                            <label for="keys">Keys</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="backpack" , name="backpack">
+                            <label for="backpack">Backpack</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="laptop" , name="laptop">
+                            <label for="laptop">Laptop</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="phone" , name="phone">
+                            <label for="phone">Phone</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <label>Angelo's Gym</label>
+                    <div class="retrace-form">
+                        <div>
+                            <input type="checkbox" id="keys" , name="keys">
+                            <label for="keys">Keys</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="backpack" , name="backpack">
+                            <label for="backpack">Backpack</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="laptop" , name="laptop">
+                            <label for="laptop">Laptop</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="phone" , name="phone">
+                            <label for="phone">Phone</label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!--Header End-->
-    <div id="emailForm"></div>
-    <div class="container-xl card">
-        <div class="days-wrapper">
-            <select name="days" id="days">
-                <option value="mon">5/29/2022 Monday</option>
-                <option value="tue">5/30/2022 Tuesday</option>
-                <option value="wed">5/31/2022 Wednesday</option>
-              </select>
+            <div class="button-wrapper">
+                <button onclick="sendEmail()">Email</button>
+                <button onclick="takeshot()">Copy</button>
+                <button onclick="clearContent()">Clear</button>
+            </div>
         </div>
-        <div class="forms-container">
-            <div class="form-wrapper">
-                <label>Steven's Barber</label>
-                <div class="retrace-form">
-                    <div>
-                        <input type="checkbox" id="keys", name="keys">
-                        <label for="keys">Keys</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="backpack", name="backpack">
-                        <label for="backpack">Backpack</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="laptop", name="laptop">
-                        <label for="laptop">Laptop</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="phone", name="phone">
-                        <label for="phone">Phone</label> 
-                    </div>
-                </div>
+        <!--Footer-->
+        <footer class="mt-auto">
+            <div class="container">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-3 text-muted">Go back to start</a></li>
+                </ul>
+                <p class="text-center text-muted">CSTP 1304 project created by Keisuke Kawataki, Steven Uhm, Emil Sangil
+                </p>
             </div>
-            <div class="form-wrapper">
-                <label>Keisuke's Restaurant</label>
-                <div class="retrace-form">
-                    <div>
-                        <input type="checkbox" id="keys", name="keys">
-                        <label for="keys">Keys</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="backpack", name="backpack">
-                        <label for="backpack">Backpack</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="laptop", name="laptop">
-                        <label for="laptop">Laptop</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="phone", name="phone">
-                        <label for="phone">Phone</label> 
-                    </div>
-                </div>
-            </div>
-            <div class="form-wrapper">
-                <label>Emil's Cafe</label>
-                <div class="retrace-form">
-                    <div>
-                        <input type="checkbox" id="keys", name="keys">
-                        <label for="keys">Keys</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="backpack", name="backpack">
-                        <label for="backpack">Backpack</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="laptop", name="laptop">
-                        <label for="laptop">Laptop</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="phone", name="phone">
-                        <label for="phone">Phone</label> 
-                    </div>
-                </div>
-            </div>
-            <div class="form-wrapper">
-                <label>Angelo's Gym</label>
-                <div class="retrace-form">
-                    <div>
-                        <input type="checkbox" id="keys", name="keys">
-                        <label for="keys">Keys</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="backpack", name="backpack">
-                        <label for="backpack">Backpack</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="laptop", name="laptop">
-                        <label for="laptop">Laptop</label> 
-                    </div>
-                    <div>
-                        <input type="checkbox" id="phone", name="phone">
-                        <label for="phone">Phone</label> 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="button-wrapper">
-            <button onclick="sendEmail()">Email</button>
-            <button>Copy</button>
-            <button onclick="clearContent()">Clear</button>
-        </div>
-    </div>
-</div>
-    <!--Footer-->
-    <footer class="mt-auto">
-        <div class="container">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-3 text-muted">Go back to start</a></li>
-            </ul>
-            <p class="text-center text-muted">CSTP 1304 project created by Keisuke Kawataki, Steven Uhm, Emil Sangil</p>
-        </div>
-    </footer>
-    <!--End of Footer-->
+        </footer>
+        <!--End of Footer-->
 
 </body>
+
 </html>
