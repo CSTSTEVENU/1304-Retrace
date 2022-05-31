@@ -1,0 +1,80 @@
+body{
+    color: #ffffff;
+    background-color: #29377C;
+}
+.retrace-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;;
+    height: auto;
+    width: 953px;
+    background-color:#464A9E;
+    justify-content: space-around;
+}
+.days-wrapper{
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.form-wrapper{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    flex-basis: 300px;
+}
+.retrace-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button{
+    height: 91px;
+    width:150px;
+    background-color: #466AA1;
+    border-radius: 8px;
+    color: #ffffff;
+    margin-right: 30px;
+}
+
+.button-wrapper{
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    justify-content:center;
+    flex-wrap: wrap;
+    flex-basis: auto;
+}
+input,label{
+    margin: 10px;
+}
+label{
+    font-size: 24px;
+}
+
+.forms-container{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+select{
+    width:300px;
+    height:70px;
+    font-size: 24px;
+    padding-left: 30px;
+}
+
+input[type="checkbox"]{
+    background-color: green;
+}
+
+@media only screen and (max-width:549px)
+{
+    button{
+        width: 80px;
+    }
+}
