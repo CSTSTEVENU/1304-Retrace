@@ -1,39 +1,3 @@
-const newProfile = `
-  <div class="shared_profiles" id="closeProfile">
-    <h3 class="">Add another user?</h3>
-    <div class="profile_icons" id="profile_pannel">
-      <div>
-        <a href="">
-          <img class="profile_round"
-            src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-            alt="" srcset="">
-        </a>
-      </div>
-      <div>
-        <a href="">
-          <img class="profile_round"
-            src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-            alt="" srcset="">
-        </a>
-      </div>
-      <div>
-        <a href="">
-          <img class="profile_round"
-            src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-            alt="" srcset="">
-        </a>
-      </div>
-      <div>
-      <button class = 'transparent_button' href="" onclick="closeProfile()">
-          <img class="profile_round"
-            src="./images/plus.svg"
-            alt="" srcset="">
-        </button>
-      </div>
-    </div>
-  </div>
-`
-
 const sendEmailContent = `
 <div class="shared_profile_form">
 <h3 class="text-light text-center">User List</h3>
@@ -61,7 +25,8 @@ const sendEmailContent = `
 
 function sharedProfile (){
     console.log("Success!")
-        appendHTML(newProfile, 'newProfileUsers')
+    let newProfile = getScreenshot ()
+    appendHTML(newProfile, 'newProfileUsers')
 }
 
 function sendEmail(){
@@ -89,11 +54,6 @@ function clearContent(){
   }
 }
 
-function copyContent(id){
- 
-}
-
-
 function sendEmail() {
 
 }
@@ -105,4 +65,24 @@ function takeshot() {
       const base64image = canvas.toDataURL("image/png");
       localStorage.setItem('image', base64image);
   });
+}
+
+function getScreenshot (){
+  let screenshot = localStorage.getItem('image')
+
+  const newProfile = `
+  <div class="shared_profiles" id="closeProfile">
+    <h3 class="">Shared User Profile</h3>
+    <div class="profile_icons" id="profile_pannel">
+      <div>
+        <a href="">
+          <img class="localStorage_round"
+            src="${screenshot}"
+            alt="" srcset="">
+        </a>
+      </div>
+    </div>
+  </div>
+`
+return newProfile
 }
