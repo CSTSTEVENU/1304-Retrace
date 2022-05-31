@@ -8,7 +8,6 @@ body{
     margin-top: 100px;;
     height: auto;
     width: 953px;
-    background-color:#464A9E;
     justify-content: space-around;
 }
 .days-wrapper{
@@ -59,6 +58,7 @@ label{
     display: flex;
     justify-content:space-around;
     flex-wrap: wrap;
+    background-color:#464A9E;
 }
 
 select{
