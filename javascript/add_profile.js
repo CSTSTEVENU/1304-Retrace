@@ -95,7 +95,7 @@ function copyContent(id){
 
 
 function sendEmail() {
-
+  
 }
 
 function takeshot() {
