@@ -66,6 +66,18 @@ background-color: $header_color !important;
     width:200px;
 }
 
+.localStorage_round{
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 7px;
+    margin: 10px;
+    width:200px; 
+}
+
+.localStorage_pic{
+    width: 10%;
+}
+
 .shared_prifile_form{
     background-color: $card_bg_color !important;
     border-radius: 8px;

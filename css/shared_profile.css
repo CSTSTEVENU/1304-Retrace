@@ -15,14 +15,6 @@ header {
   border: none !important;
 }
 
-.nav-link {
-  color: rgb(255, 255, 255) !important;
-  }
-
-.navbar-brand {
-  color:rgb(255, 255, 255) !important;
-}
-
 .top_space {
   margin: 10px;
 }
@@ -93,6 +85,18 @@ header {
   padding: 7px;
   margin: 10px;
   width: 200px;
+}
+
+.localStorage_round {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 7px;
+  margin: 10px;
+  width: 200px;
+}
+
+.localStorage_pic {
+  width: 10%;
 }
 
 .shared_prifile_form {
