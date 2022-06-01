@@ -55,7 +55,8 @@ function clearContent(){
 }
 
 function sendEmail() {
-  
+
+  document.getElementById("hidden").style.display = "block";
 }
 
 function takeshot() {
@@ -85,4 +86,14 @@ function getScreenshot (){
   </div>
 `
 return newProfile
+}
+
+function sent(){
+  console.log("clicked")
+  x = document.getElementById('wrapper')
+  y = document.createElement('div')
+  y.className = "alert alert-success"
+  y.role = "alert"
+  y.textContent = "Email successfully sent"
+  x.prepend(y)
 }

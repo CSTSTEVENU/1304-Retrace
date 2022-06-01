@@ -47,7 +47,7 @@
             </nav>
         </header>
         <!--Header End-->
-        <div class="container-xl card">
+        <div class="container-xl card" id="wrapper">
             <div class="days-wrapper">
                 <select name="days" id="days">
                     <option value="mon">5/29/2022 Monday</option>
@@ -139,6 +139,13 @@
                             <label for="phone">Phone</label>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="hidden" id="hidden">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" style="width:300px;">
+                <div>
+                    <button id="email-submit" onclick="sent()">Submit</button>
                 </div>
             </div>
             <div class="button-wrapper">
