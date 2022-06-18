@@ -31,12 +31,16 @@ body{
 }
 
 button{
-    height: 91px;
-    width:150px;
+    /* height: 91px; */
+    /* width:150px; */
     background-color: #466AA1;
     border-radius: 8px;
     color: #ffffff;
     margin-right: 30px;
+}
+
+.btn-primary{
+    background-color: #466AA1 !important;
 }
 
 .button-wrapper{
