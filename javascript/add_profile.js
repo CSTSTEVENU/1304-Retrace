@@ -104,6 +104,8 @@ function sent(){
 
   localStorage.setItem('email', JSON.stringify(email));
 
+  document.getElementById('f2').value = e.email;
+
   if(document.getElementById('alerts'))
   {
     (document.getElementById('wrapper').removeChild(document.getElementById('alerts')))
