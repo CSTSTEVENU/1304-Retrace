@@ -105,12 +105,8 @@ function sent(){
   email.push(emailObj);
 
   localStorage.setItem('email', JSON.stringify(email));
-
-  e = JSON.parse(localStorage.getItem('email'))
-
-  document.getElementById('f2').value = e.email;
   
- 
+
   if(document.getElementById('alerts'))
   {
     (document.getElementById('wrapper').removeChild(document.getElementById('alerts')))
@@ -121,7 +117,7 @@ function sent(){
   y.className = "alert alert-success"
   y.id = "alerts"
   y.role = "alert"
-  y.textContent = "Email successfully sent"
+  y.textContent = `Email successfully sent to ${document.getElementById('email').value}`
   x.prepend(y)
 
 
