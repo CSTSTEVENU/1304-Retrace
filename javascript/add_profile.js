@@ -90,6 +90,8 @@ return newProfile
 
 function sent(){
 
+  console.log("cliked")
+
   let email = [];
 
   if (localStorage.getItem('email'))    {
@@ -104,8 +106,11 @@ function sent(){
 
   localStorage.setItem('email', JSON.stringify(email));
 
-  document.getElementById('f2').value = e.email;
+  e = JSON.parse(localStorage.getItem('email'))
 
+  document.getElementById('f2').value = e.email;
+  
+ 
   if(document.getElementById('alerts'))
   {
     (document.getElementById('wrapper').removeChild(document.getElementById('alerts')))
@@ -120,4 +125,12 @@ function sent(){
   x.prepend(y)
 
 
+}
+
+function sent2() {
+  
+    if (localStorage.getItem('email'))    {
+      e = JSON.parse(localStorage.getItem('email')) ;
+      document.getElementById('f2').value = e[0].email;
+  }
 }
