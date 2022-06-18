@@ -1,26 +1,26 @@
-const sendEmailContent = `
-<div class="shared_profile_form">
-<h3 class="text-light text-center">User List</h3>
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label text-light">Name</label>
-    <input type="email" class="form-control" id="f1" aria-describedby="emailHelp">
-  </div>
+// const sendEmailContent = `
+// <div class="shared_profile_form">
+// <h3 class="text-light text-center">User List</h3>
+// <form>
+//   <div class="mb-3">
+//     <label for="exampleInputEmail1" class="form-label text-light">Name</label>
+//     <input type="email" class="form-control" id="f1" aria-describedby="emailHelp">
+//   </div>
 
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label text-light">Email address</label>
-    <input type="email" class="form-control" id="f2" aria-describedby="emailHelp">
-  </div>
-  <button class = 'transparent_button' href="" onclick="sharedProfile()">
-  Submit
-  </button>
+//   <div class="mb-3">
+//     <label for="exampleInputEmail1" class="form-label text-light">Email address</label>
+//     <input type="email" class="form-control" id="f2" aria-describedby="emailHelp">
+//   </div>
+//   <button class = 'transparent_button' href="" onclick="sharedProfile()">
+//   Submit
+//   </button>
 
-  <button class = 'transparent_button' href="" onclick="sharedProfile()">
-  Cancel
-  </button>
-  </form>
-</div>
-` 
+//   <button class = 'transparent_button' href="" onclick="sharedProfile()">
+//   Cancel
+//   </button>
+//   </form>
+// </div>
+// ` 
 
 
 function sharedProfile (){
@@ -29,10 +29,10 @@ function sharedProfile (){
     appendHTML(newProfile, 'newProfileUsers')
 }
 
-function sendEmail(){
-  console.log("Success email!")
-  appendHTML(sendEmailContent, 'emailForm')
-}
+// function sendEmail(){
+//   console.log("Success email!")
+//   appendHTML(sendEmailContent, 'emailForm')
+// }
 
 function appendHTML(newContent, elementID) {
     const profile = document.getElementById(elementID)
@@ -89,11 +89,33 @@ return newProfile
 }
 
 function sent(){
+
+  let email = [];
+
+  if (localStorage.getItem('email'))    {
+    e = JSON.parse(localStorage.getItem('email')) ;
+}
+  
+  let emailObj = {};
+
+  emailObj.email = document.getElementById('email').value;
+
+  email.push(emailObj);
+
+  localStorage.setItem('email', JSON.stringify(email));
+
+  if(document.getElementById('alerts'))
+  {
+    (document.getElementById('wrapper').removeChild(document.getElementById('alerts')))
+  }
   console.log("clicked")
   x = document.getElementById('wrapper')
   y = document.createElement('div')
   y.className = "alert alert-success"
+  y.id = "alerts"
   y.role = "alert"
   y.textContent = "Email successfully sent"
   x.prepend(y)
+
+
 }
