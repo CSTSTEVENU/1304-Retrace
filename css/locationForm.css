@@ -1,0 +1,25 @@
+#container {
+  width: 100%;
+  height: 100%;
+  top: -33%;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  background-color: rgba(22,22,22,0.5); /* complimenting your modal colors */
+}
+#container {
+  visibility: visible;
+  display: block;
+}
+.reveal-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(19, 44, 73);
+  margin: 15% auto;
+  /* padding: 25px; */
+  width: 80%;
+  /* height: 50%; */
+
+  top: 25%;
+}
