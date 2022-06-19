@@ -115,13 +115,14 @@ function updateListCard(number){
 }
 
 const updateValues = (number) =>{
-    console.log("Updated")
+    console.log(`${number} is updated!`)
     let updatedName = document.getElementById(`updateLocationName_${number}`)
     let updatedItems = document.getElementById(`updatedLocationItems_${number}`)
-    console.log(updatedName.value)
-    console.log(updatedItems.value)
-    // localStorage.setItem(`locationName_${number}`, updatedName)
-    // localStorage.setItem(`locationItems_${number}`, updatedItems)
+    // console.log(updatedName)
+    // console.log(updatedItems)
+    localStorage.setItem(`locationName_${number}`, updatedName.value)
+    localStorage.setItem(`locationItems_${number}`, updatedItems.value)
+    deleteListCard('container') //exit popup
 } 
 
 const generateCheckbox = (array) =>{
