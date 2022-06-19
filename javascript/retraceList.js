@@ -1,12 +1,13 @@
 let idNum = 0
 
 
-function addListCard (){
+function addPlace (){
     console.log("Add")
-    createForm(idNum)
-    appendElement("listParent", idNum)
-
-    idNum += 1
+    
+    if(createForm(idNum)){
+        appendElement("listParent", idNum) //new card
+        idNum += 1
+    }
 }
 
 function editListCard(number){
@@ -21,6 +22,7 @@ function deleteListCard(domID){
     parentDom.parentNode.removeChild(parentDom)
 }
 
+//Appned List
 function appendElement(parentID, number){
     const parentDom = document.getElementById(parentID)
 
@@ -43,13 +45,17 @@ function appendElement(parentID, number){
     `
 }
 
+//Create form
 function createForm(number){
+    console.log(`locationName_${number}`)
     let items = `key, phone, book,...`
 
     let locationName = document.getElementById(`locationName_${number}`)
     localStorage.setItem(`locationName_${number}`, locationName)
 
     let locationItems = document.getElementById(`locationItems_${number}`)
+    //Set items
+    localStorage.setItem(`locationItems_${number}`, JSON.stringify(locationItems));
     console.log(locationItems)
 
 
@@ -65,17 +71,19 @@ function createForm(number){
         </div
         <div>
             <button class="btn btn-primary" onclick="deleteListCard('\container\')">Cancel</button>
-            <button class="btn btn-primary" onclick="">Add</button>
+            <button class="btn btn-primary" onclick="updateValues(${number})">Add</button>
         </div>
     </div>
 </div>
     `
     const parentDom = document.querySelector('body')
-    parentDom.innerHTML += newForm
-    
-
-    
+    parentDom.innerHTML += newForm    
 }
+
+const addOnLocalStorage = () =>{
+    location = document.getElementById()
+}
+
 
 const pushItem = (number) =>{
     console.log("Added", number)
@@ -116,12 +124,15 @@ function updateListCard(number){
 
 const updateValues = (number) =>{
     console.log(`${number} is updated!`)
-    let updatedName = document.getElementById(`updateLocationName_${number}`)
-    let updatedItems = document.getElementById(`updatedLocationItems_${number}`)
-    // console.log(updatedName)
-    // console.log(updatedItems)
-    localStorage.setItem(`locationName_${number}`, updatedName.value)
-    localStorage.setItem(`locationItems_${number}`, updatedItems.value)
+    let updatedName = document.getElementById(`updateLocationName_${number}`).value
+    let updatedItems = document.getElementById(`updatedLocationItems_${number}`).value
+    console.log(updatedName)
+    console.log(updatedItems)
+
+    // let updatedArr = 
+
+    localStorage.setItem(`locationName_${number}`, updatedName)
+    localStorage.setItem(`locationItems_${number}`, updatedItems)
     deleteListCard('container') //exit popup
 } 
 
