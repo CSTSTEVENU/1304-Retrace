@@ -130,3 +130,27 @@ function sent2() {
       document.getElementById('f2').value = e[0].email;
   }
 }
+
+var checkboxes = document.querySelectorAll(
+  'input[type=checkbox]');
+
+function save() {
+  console.log("clicked")
+  for (i = 0; i < checkboxes.length; i++) {
+    localStorage.setItem(checkboxes[i].value, JSON.stringify(checkboxes[i].checked));
+  }
+}
+ 
+ 
+ function load_() {
+  console.log("clicked")
+    for (i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = JSON.parse(localStorage.getItem(checkboxes[i].value === 'true' ? true:false))
+      console.log(checkbox[i].value)
+    }
+}
+
+console.log(load_);
+console.log(save);
+ 
+ 
