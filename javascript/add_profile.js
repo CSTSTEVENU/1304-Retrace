@@ -131,26 +131,21 @@ function sent2() {
   }
 }
 
-var checkboxes = document.querySelectorAll(
-  'input[type=checkbox]');
+
 
 function save() {
-  console.log("clicked")
+  let checkboxes = document.querySelectorAll('input[type=checkbox]');
   for (i = 0; i < checkboxes.length; i++) {
-    localStorage.setItem(checkboxes[i].value, JSON.stringify(checkboxes[i].checked));
+    localStorage.setItem(checkboxes[i].id+i, checkboxes[i].checked);
   }
 }
  
  
  function load_() {
-  console.log("clicked")
-    for (i = 0; i < checkboxes.length; i++) {
-      checkboxes[i].checked = JSON.parse(localStorage.getItem(checkboxes[i].value === 'true' ? true:false))
-      console.log(checkbox[i].value)
-    }
+  let checkboxes = document.querySelectorAll('input[type=checkbox]');
+  for (i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = localStorage.getItem((checkboxes[i].id+i)) === 'true' ? true:false
+  }
 }
-
-console.log(load_);
-console.log(save);
  
  
