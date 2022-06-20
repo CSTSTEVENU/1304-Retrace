@@ -81,10 +81,10 @@ function appendElement(parentID, number){
     let storedItems = JSON.parse(localStorage.getItem(`locationItems_${number}`))
     
     parentDom.innerHTML += `
-    <div id="location_${number}">
-        <h1>${location}</h1>
+    <div class ="p-2" id="location_${number}" >
+        <h1 class ="">${location}</h1>
         ${generateCheckbox(storedItems)}
-        <div>
+        <div class ="p-2">
             <button class="btn btn-primary" onclick="updateLocalstorage('${number}')">Edit</button>
             <button class="btn btn-warning delete_button" onclick="deleteListCard('\location_${number}\')">Delete</button>
         </div>
