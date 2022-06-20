@@ -147,5 +147,5 @@ function save() {
     checkboxes[i].checked = localStorage.getItem((checkboxes[i].id+i)) === 'true' ? true:false
   }
 }
-// edit
+
  
